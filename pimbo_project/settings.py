@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pimbo.apps.PimboConfig',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
