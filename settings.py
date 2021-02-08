@@ -81,12 +81,8 @@ WSGI_APPLICATION = 'pimbo_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'demo_1',
-        'USER': 'othonrds',
-        'PASSWORD': '88116566othon',
-        'HOST': 'database-1.ceyrv9od3jjl.sa-east-1.rds.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
