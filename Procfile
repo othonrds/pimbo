@@ -1,1 +1,1 @@
-web: gunicorn the_base.wsgi --log-file -
+web: gunicorn pimbo_project.wsgi --log-file -
