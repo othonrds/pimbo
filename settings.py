@@ -25,7 +25,7 @@ SECRET_KEY = '89pr!nge%(&sxu_(duf+m3owjs^&nhwjwd=v0(97l3lj37t$m8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['base-abeia.herokuapp.com','127.0.0.1'] 
+ALLOWED_HOSTS = [*] 
 
 
 # Application definition
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'the_base.urls'
+ROOT_URLCONF = 'pimbo_project.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'the_base.wsgi.application'
+WSGI_APPLICATION = 'pimbo_project.wsgi.application'
 
 
 # Database
