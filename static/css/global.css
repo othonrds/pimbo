@@ -29,3 +29,19 @@ html, body {
 .item3 {
   grid-area: 9 / 6;
 }
+
+.item4 {
+  grid-area: 9 / 5;
+}
+
+.item5 {
+  grid-area: 8 / 6;
+}
+
+.item6 {
+  grid-area: 8 / 5;
+}
+
+.item7 {
+  grid-area: 7 / 4;
+}
