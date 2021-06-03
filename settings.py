@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+import dj_database_url
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -25,7 +26,7 @@ SECRET_KEY = '89pr!nge%(&sxu_(duf+m3owjs^&nhwjwd=v0(97l3lj37t$m8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*'] 
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,11 +83,10 @@ WSGI_APPLICATION = 'pimbo_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(os.path.join(BASE_DIR, "db.sqlite3"))
     }
 }
 
-import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
@@ -137,14 +137,7 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
-#SMTP Configuration
-
-
-
-
-
-
-
+# SMTP Configuration
 
 
 AWS_ACCESS_KEY_ID = 'AKIAZ2RI6FYJYF54CAJB'
@@ -154,4 +147,4 @@ AWS_STORAGE_BUCKET_NAME = 'othonrds-abeia-bucket'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage' #look to bucket first!
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'  # look to bucket first!

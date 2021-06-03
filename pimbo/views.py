@@ -1,6 +1,13 @@
 from django.shortcuts import render
+from .models import *
+
 
 # Create your views here.
 
+
 def main(request):
-    return render(request, 'pimbo/main.html')
+    tasks = Task.objects.all()
+
+    context = {'tasks': tasks}
+
+    return render(request, 'pimbo/main.html', context)
